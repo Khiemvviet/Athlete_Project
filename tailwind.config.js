@@ -1,8 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+
+
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        n: {
+          1: "#fafafa", //white
+          2: "#dc2626", //red
+          3: "#525252", //gray
+          4: "#0a0a0a", //black
+        },
+      },
+      fontFamily: {
+        t: ['Nunito'],
+        h: ['Bona Nova SC'],
+      },
+    },
   },
   plugins: [],
 }
