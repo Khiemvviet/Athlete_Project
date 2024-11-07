@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <div id="home" className="pt-[3rem] overflow-hidden bg-n-1">
+      <div id="home" className="pt-[3rem] bg-n-1 overflow-hidden">
           <Header />
 
           {/* <Routes>
