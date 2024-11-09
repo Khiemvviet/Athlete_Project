@@ -1,13 +1,27 @@
 
 import React from "react";
-
+import AboutUs from "./AboutUs";
+import MuscleButton from "./MuscleButton";
+import Goat from "../assets/Goat.mp4"
 
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the home page content!</p>
+    <>
+    <div className="relative w-full h-screen mt-20">
+      <video
+      className="absolute top-0 left-0 w-full h-full object-cover"
+      autoPlay
+      loop
+      muted
+      >
+        <source src= {Goat} type="video/mp4"/>
+      </video>
     </div>
+    <div>
+      <AboutUs />
+      <MuscleButton />
+    </div>
+    </>
   );
 };
 
