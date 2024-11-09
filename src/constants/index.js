@@ -17,7 +17,6 @@ export const navigation = [
           { id: 3, title: "Core", url: "/Core" },
           { id: 4, title: "Drill", url: "/Drill" },
           { id: 5, title: "Lower Body", url: "/LowerBody" },
-
         ]
     },
     {

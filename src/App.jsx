@@ -21,10 +21,10 @@ function App() {
 
   return (
     <>
-      <div id="home" className="pt-[3rem] overflow-hidden bg-n-1">
+      <div id="home" className="pt-[3rem] bg-n-1 overflow-hidden">
           <Header />
 
-          {/* <Routes>
+          <Routes>
             <Route path= "/" element = {<Home/>} />
             <Route path= "/Back" element = {<Back/>} />
             <Route path= "/Chest" element = {<Chest/>} />
@@ -34,7 +34,7 @@ function App() {
             <Route path= "/Nutrition" element = {<Nutrition/>} />
             <Route path= "/Plan" element = {<Plan/>} />
             <Route path= "/Contact" element = {<Contact/>} />
-          </Routes> */}
+          </Routes>
 
           <Footer/>
 
