@@ -2,7 +2,7 @@
 import React from "react";
 import AboutUs from "./AboutUs";
 import MuscleButton from "./MuscleButton";
-import Goat from "../assets/Goat.mp4"
+import Goat from "../assets/Goat1.mp4"
 
 const Home = () => {
   return (
