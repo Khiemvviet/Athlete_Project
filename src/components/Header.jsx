@@ -55,8 +55,8 @@ const Header = () => {
 
     return (
         <>
-        <div className="fixed flex bg-n-4 w-full z-50 top-0 left-0 pl-30 px-20 py-5" >
-            <div className=" flex justify-between  flex-1">
+        <div className="fixed flex bg-n-4 w-full h-32 z-50 top-0 left-0 pl-30 px-20 py-3" >
+            <div className=" flex justify-between flex-1">
                 <Link to= "/">
                 <IoFootball size={100}color="red"></IoFootball>
                 </Link>
