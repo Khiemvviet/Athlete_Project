@@ -1,8 +1,9 @@
 
 import React from "react";
-import AboutUs from "./AboutUs";
+import Intro from "./Intro";
 import MuscleButton from "./MuscleButton";
 import Goat from "../assets/Goat1.mp4"
+import AboutUs  from "./AboutUs";
 
 const Home = () => {
   const ScrolltoSection =(id)=>{
@@ -39,10 +40,12 @@ const Home = () => {
 
       </div>
     </div>
+
     <div>
       <div id= "AboutUs">
         <AboutUs />
       </div>
+      <Intro />
       <MuscleButton />
     </div>
     </>
