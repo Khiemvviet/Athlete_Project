@@ -1,45 +1,50 @@
-import React from 'react'
-import { GiMuscleUp } from "react-icons/gi";
-import { GiLeg } from "react-icons/gi";
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { buttonData } from "../constants"
 
 const MuscleButton = () => {
+  const [hoveredButtons, setHoveredButtons] = useState({});
+
+  const handleMouseEnter = (index) => {
+    setHoveredButtons((prevState) => ({ ...prevState, [index]: true }));
+  };
+
+  const handleMouseLeave = (index) => {
+    setHoveredButtons((prevState) => ({ ...prevState, [index]: false }));
+  };
+
+  
+
   return (
-    <div>
-      <div className="w-full min-h-[screen] py-10 ">
-      <h1 className="text-n-4 text-center mt-10 text-6xl font-bold pb-20">Get Started!</h1>
-        <div className="flex flex-col items-center mt-32 mb-20 justify-center px-5 lg:flex-row lg:mr-5">
-          <Link to ="/Chest">
-            <button className="text-n-1 text-xl font-bold mt-5  relative h-100vh px-20 py-5 border-solid border-r border-2 rounded-full bg-n-3 hover:text-n-4 lg:mr-7">
-              <GiMuscleUp color="white" size={50} />Chest
-            </button>
-          </Link>
-          <Link to ="/Back">
-            <button className="text-n-1 text-xl font-bold mt-5 relative h-100vh px-20 py-5 border-solid border-r border-2 rounded-full bg-n-3 hover:text-n-4 lg:mr-7">
-              <GiMuscleUp color="white" size={50} />Back
-            </button>
-          </Link>
-          <Link to ="/Core">
-            <button className="text-n-1 text-xl font-bold mt-5 relative h-100vh px-20 py-5 border-solid border-r border-2 rounded-full bg-n-3 hover:text-n-4 lg:mr-7">
-              <GiMuscleUp color="white" size={50} />Core
-            </button>
-          </Link>
-          <Link to ="/LowerBody">
-            <button className="text-n-1 text-xl flex flex-col items-center justify-center font-bold mt-5 relative h-100vh px-12 py-5 border-solid border-r border-2 rounded-full bg-n-3 hover:text-n-4 lg:mr-7">
-              <GiLeg color="white" size={50} />Lower Body
-            </button>
-          </Link>
-          <Link to ="/Drill">
-            <button className="text-n-1 text-xl font-bold mt-5 relative h-100vh px-20 py-5 border-solid border-r border-2 rounded-full bg-n-3 hover:text-n-4 lg:mr-7">
-              <GiLeg color="white" size={50} />Drill
-            </button>
-          </Link>
-
-        </div>
-
+    <div className="w-full min-h-[screen] py-10 ">
+      <div className="text-n-4 text-center mt-10 ">
+        <h1 className=" text-6xl font-bold ">Get Started!</h1>
+        <p className="pt-10 text-xl">Learn how muscle is a key factor for your performance.</p>
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-3 pt-10 justify-center items-center">
+        {buttonData.map((button, index) => (
+          <div key={index} className="relative flex justify-center flex-wrap mb-10">
+            <div className="w-[320px] h-[450px] bg-n-1 border-n-4 border-2 rounded-lg overflow-visible m-5 lg:w-[280px]">
+              <img src={button.image} alt={button.text} className="w-full h-[75%] object-cover" />
+              <div className="p-1 text-center mt-2 pb-9 justify-center items-center">
+                <p className="text-xl pt-2">{button.description}</p>
+                <Link to={button.link}>
+                  <button
+                    className={`text-n-1 text-xl font-bold justify-center items-center rounded-lg w-[175px] px-5 mt-2 mb-2 py-5 
+                    ${hoveredButtons[index] ? "bg-n-2 text-n-4" : "bg-n-4"} hover:text-n-4`}
+                    onMouseEnter={() => handleMouseEnter(index)}
+                    onMouseLeave={() => handleMouseLeave(index)}
+                  >
+                    {hoveredButtons[index] ? "Learn more" : button.text}
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MuscleButton
+export default MuscleButton;

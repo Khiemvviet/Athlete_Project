@@ -56,14 +56,14 @@ const Header = () => {
     return (
         <>
         <div className="fixed flex bg-n-4 w-full h-32 z-50 top-0 left-0 pl-30 px-20 py-3" >
-            <div className=" flex justify-between flex-1">
+            <div className=" flex justify-between items-center flex-1">
                 <Link to= "/">
-                <IoFootball size={100}color="red"></IoFootball>
+                <IoFootball size={80}color="red"></IoFootball>
                 </Link>
             </div>
 
             <nav className={`${ 
-                openNavigation ? "flex" : "hidden"}  text-n-1 font-bold justify-end flex-1 lg:flex `}>
+                openNavigation ? "flex" : "hidden"}  text-n-1 font-bold justify-end flex-1 lg:flex`}>
                 <div className="flex-10">
                     <div className="flex flex-col gap-20 mr-20 mt-10 items-center lg:flex-row">
                         {navigation.map((item) => (
