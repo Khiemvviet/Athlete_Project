@@ -1,5 +1,4 @@
 import React from 'react'
-import f2 from "../assets/f2.jpg"
 import f3 from "../assets/f3.webp"
 
 

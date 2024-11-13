@@ -19,7 +19,7 @@ const Intro = () => {
         <p>Soccer workouts are training programs focused on building endurance, speed, strength, and agility to help players stay at peak performance on the field.</p>
 
           <div className="pt-5 pb-3 text-left">
-            <ul className="px-5 space-y-4">
+            <ul className="space-y-4">
               <li>
                 <strong>Match Stamina:</strong> Boost endurance to maintain energy throughout games.
               </li>
