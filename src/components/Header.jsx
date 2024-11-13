@@ -55,7 +55,7 @@ const Header = () => {
 
     return (
         <>
-        <div className="fixed flex bg-n-4 w-full h-32 z-50 top-0 left-0 pl-30 px-20 py-3" >
+        <div className="fixed flex bg-n-4 w-full h-28 z-50 top-0 left-0 px-20 py-3" >
             <div className=" flex justify-between items-center flex-1">
                 <Link to= "/">
                 <IoFootball size={80}color="red"></IoFootball>
@@ -63,9 +63,9 @@ const Header = () => {
             </div>
 
             <nav className={`${ 
-                openNavigation ? "flex" : "hidden"}  text-n-1 font-bold justify-end flex-1 lg:flex`}>
-                <div className="flex-10">
-                    <div className="flex flex-col gap-20 mr-20 mt-10 items-center lg:flex-row">
+                openNavigation ? "flex" : "hidden"}  text-n-1 font-bold justify-end bg-n-4 lg:flex`}>
+                <div className="flex-1">
+                    <div className="flex flex-col gap-10 -mr-24 pb-5 px-20 mt-24 bg-n-4 justify-center items-center lg:flex-row lg:mt-9 lg:gap-20">
                         {navigation.map((item) => (
                             <div 
                                 key={item.id}
@@ -73,7 +73,7 @@ const Header = () => {
                             >
                                 <Link
                                     to={item.hasSubmenu ? "#" :item.url}
-                                    className=" text-n-1 hover:text-n-2 font-bold text-sm flex flex-row"
+                                    className=" text-n-1 hover:text-n-2 font-bold text-center flex flex-col lg:flex-row"
                                     onClick={()=>{
                                         if (item.hasSubmenu){
                                             toggleSubmenu(item.id);
@@ -85,7 +85,7 @@ const Header = () => {
                                     {item.title}
                                     {!openNavigation && item.hasSubmenu && (
                                         <GoChevronDown
-                                            className={`ml-2 mt-1 transform transition-transform ${
+                                            className={`ml-2 mt-1  transform transition-transform ${
                                                 openSubmenu === item.id ? "rotate-180" : ""
                                             }`}
                                             size={16}
@@ -95,12 +95,12 @@ const Header = () => {
                                 </Link>
 
                                 {!openNavigation ? (item.hasSubmenu && openSubmenu === item.id && (
-                                    <div className="absolute w-auto mt-6 z-10 rounded-lg bg-n-4 shadow-lg ">
+                                    <div className="absolute w-auto mt-6 -ml-5 z-10 rounded-lg bg-n-4 shadow-lg ">
                                         {item.submenu.map((submenuItem) => (
                                             <Link
                                             key = {submenuItem.id}
                                             to={submenuItem.url}
-                                            className="block px-8 py-2 text-n-1 hover:text-n-2 font-bold mt-2 text-sm "
+                                            className="block px-8 py-2 text-n-1 hover:text-n-2  mt-2 text-sm "
                                             onClick={handleNavClick}
                                             >
                                                 {submenuItem.title}
@@ -114,7 +114,7 @@ const Header = () => {
                                             <Link
                                             key = {submenuItem.id}
                                             to={submenuItem.url}
-                                            className=" text-n-1 hover:text-n-2 font-bold text-sm flex flex-col"
+                                            className=" text-n-1 hover:text-n-2 text-sm flex text-center flex-col"
                                             onClick={handleNavClick}
                                             >
                                                 {submenuItem.title}
