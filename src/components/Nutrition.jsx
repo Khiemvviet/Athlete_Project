@@ -58,6 +58,23 @@ const Nutrition = () => {
       const carbs = (bmr*0.5) /4;
       const fats = (bmr*0.25) /9;
 
+      const userData= {
+        height: h,
+        weight: w,
+        age:a,
+        sex,
+        activityLevel,
+        bmr: bmr.toFixed(0),
+        macros:{
+          protein: protein.toFixed(0),
+          carbs: carbs.toFixed(0),
+          fats: fats.toFixed(0),
+        },
+
+      };
+
+      localStorage.setItem('userNutrition', JSON.stringify(userData));
+      
       setBmr(bmr);
       setMacros({protein, carbs, fats}); 
       setResult(true)

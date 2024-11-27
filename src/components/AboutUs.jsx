@@ -5,7 +5,7 @@ import f3 from "../assets/f3.webp"
 const AboutUs = () => {
   return (
     <div className="relative">
-      <div className="flex flex-col bg-n-1 px-10 justify-center lg:flex-row">
+      <div className=" bg-n-1 px-10 justify-center ">
         <div className="flex flex-col px-5 lg:text-left lg:flex-row py-5 ">
           <div id="Intro" className="w-full text-center lg:text-left lg:pl-[10%] lg:mr-[10%] lg:mt-5">
             <h1 className="font-bold mt-20 mb-10 text-5xl text-n-4 leading-loose">Winning Formula</h1>
