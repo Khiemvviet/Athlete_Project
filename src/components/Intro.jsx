@@ -16,7 +16,7 @@ const Intro = () => {
         </div>
 
         <div id="Description" className=" lg:text-xl mt-5 mb-10 text-center px-20 py-10 space-y-5 lg:px-40">
-        <p>Soccer workouts are training programs focused on building endurance, speed, strength, and agility to help players stay at peak performance on the field.</p>
+        <p>Athlete workouts are training programs focused on building endurance, speed, strength, and agility to help players stay at peak performance on the field.</p>
 
           <div className="pt-5 pb-3 text-left">
             <ul className="space-y-4">
