@@ -7,11 +7,11 @@ import Footer from "./components/Footer";
 import MuscleButton from "./components/MuscleButton";
 import Nutrition from "./components/Nutrition";
 import Plan from "./components/Plan"
-import Back from "./components/muscle/Back";
-import Chest from "./components/muscle/Chest";
-import Core from "./components/muscle/Core";
-import Drill from "./components/muscle/Drill";
-import LowerBody from "./components/muscle/LowerBody";
+import Back from "./components/Back";
+import Chest from "./components/Chest";
+import Core from "./components/Core";
+import Drill from "./components/Drill";
+import LowerBody from "./components/LowerBody";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <div id="home" className="pt-[3rem] bg-n-1 overflow-hidden">
+      <div id="home" className="pt-[3rem] font-t bg-n-1 overflow-hidden">
           <Header />
 
           <Routes>
