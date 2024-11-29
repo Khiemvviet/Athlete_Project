@@ -12,6 +12,9 @@ const MuscleButton = () => {
   const handleMouseLeave = (index) => {
     setHoveredButtons((prevState) => ({ ...prevState, [index]: false }));
   };
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   
 
@@ -30,6 +33,7 @@ const MuscleButton = () => {
                 <p className="text-xl pt-2">{button.description}</p>
                 <Link to={button.link}>
                   <button
+                  onClick={handleClick}
                     className={`text-n-1 text-xl font-bold justify-center items-center rounded-lg w-[175px] px-5 mt-2 mb-2 py-5 
                     ${hoveredButtons[index] ? "bg-n-2 text-n-4" : "bg-n-4"} hover:text-n-4`}
                     onMouseEnter={() => handleMouseEnter(index)}

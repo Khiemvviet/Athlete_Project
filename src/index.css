@@ -10,5 +10,9 @@
     scroll-behavior: smooth;
 }
 
-
+@layer base {
+    body {
+      @apply font-t; /* Apply the Nunito font globally */
+    }
+  }
 

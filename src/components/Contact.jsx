@@ -31,11 +31,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 pt-28">
-      <div className="bg-white max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8 pt-28 ">
+      <div className="bg-white max-w-6xl mx-auto grid md:grid-cols-2 gap-8 border-n-4 border-2">
       <div className="bg-white rounded-xl overflow-hidden">
           <div className="p-4">
-            <div className="w-full h-96 bg-gray-200 flex items-center justify-center">
+            <div className="w-full h-96 bg-gray-200 flex items-center justify-center ">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.5823274287454!2d-79.47773177551093!3d43.74917957911666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2ab71b54563d%3A0xb06d2271133d13d6!2s75+Carl+Hall+Rd%2C+North+York%2C+ON+M3K+2B9%2C+Canada!5e0!3m2!1sen!2s!4v1732738391658!5m2!1sen!2s" 
                 height="100%" 
@@ -106,15 +106,15 @@ const Contact = () => {
         </div>
         <div className="bg-white rounded-xl overflow-hidden">
           <div className="p-6">
-            <h2 className="text-3xl font-semibold text-center">
-              Contact Soccer Training
+            <h2 className="text-3xl font-bold text-center">
+              Contact to us
             </h2>
           </div>
           
           <form onSubmit={handleSubmit} className="p-8 space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                Full Name
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 ">
+                Full Name:
               </label>
               <input
                 type="text"
@@ -123,14 +123,14 @@ const Contact = () => {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-0 focus:border-none transition-colors"
+                className="mt-1 block w-full rounded-md shadow-sm focus:outline-none focus:ring-0  transition-colors border-n-4 border-2"
                 style={{height: '45px', padding: '15px'}}
               />
             </div>
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email Address
+                Email Address:
               </label>
               <input
                 type="email"
@@ -139,14 +139,14 @@ const Contact = () => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-0 focus:border-none transition-colors"
+                className="mt-1 block w-full rounded-md  shadow-sm focus:outline-none focus:ring-0  transition-colors border-n-4 border-2"
                 style={{height: '45px', padding: '15px'}}
               />
             </div>
 
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                Phone Number
+                Phone Number:
               </label>
               <input
                 type="tel"
@@ -154,14 +154,14 @@ const Contact = () => {
                 id="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-0 focus:border-none transition-colors"
+                className="mt-1 block w-full rounded-md  shadow-sm focus:outline-none focus:ring-0  transition-colors border-n-4 border-2"
                 style={{height: '45px', padding: '15px'}}
               />
             </div>
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-                Your Message
+                Your Message:
               </label>
               <textarea
                 name="message"
@@ -170,7 +170,7 @@ const Contact = () => {
                 required
                 value={formData.message}
                 onChange={handleChange}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:outline-none focus:ring-0 focus:border-none transition-colors"
+                className="mt-1 block w-full rounded-md  shadow-sm focus:outline-none focus:ring-0  transition-colors border-n-4 border-2"
                 style={{padding: '15px'}}
               ></textarea>
             </div>
@@ -178,9 +178,9 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors"
+                className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm  text-white bg-n-2 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors font-bold"
               >
-                Send Message
+                Send
               </button>
             </div>
           </form>
