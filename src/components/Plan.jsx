@@ -1,5 +1,7 @@
 import React from 'react'
 import WorkoutSection from '../contents/Plan/WorkoutSection';
+import f4 from "../assets/f4.jpg";
+
 
 const Plan = () => {
   const workoutSections = [
@@ -197,6 +199,46 @@ const Plan = () => {
   
   return (
     <>
+    <div className="relative w-full h-screen">
+      <img 
+        src={f4}
+        alt="Yamal"
+        className="absolute top-0 left-0  w-full h-full object-cover"
+      />
+      
+      <div className="absolute flex px-10 flex-col bg-black/60 text-n-1 justify-center top-0 w-full h-full">
+        <div id="Intro" className="font-bold text-5xl  text-center mt-20 mb-20 pt-10">
+          <h1>The importance of planning</h1>
+        </div>
+
+        <div id="Description" className=" lg:text-xl mt-5 mb-10 text-center px-20 py-10 space-y-5 lg:px-40">
+        <p>A workout plan is crucial for an athlete's performance, recovery, and long-term health. Here are the key reasons why</p>
+
+          <div className="pt-5 pb-3 text-left">
+            <ul className="space-y-4">
+              <li>
+                <strong>Optimized Performance:</strong> Targets sport-specific skills and movements to improve strength, speed, endurance, and flexibility.
+              </li>
+              <li>
+                <strong> Injury Prevention:</strong> Balances workloads, avoiding overtraining and fatigue-related injuries.
+              </li>
+              <li>
+                <strong>Recovery and Longevity:</strong> ncludes periodization, alternating intense and moderate sessions to reduce burnout.
+              </li>
+              <li>
+                <strong>Mental Focus and Discipline:</strong> A structured plan keeps athletes motivated and focused on short- and long-term goals.
+              </li>
+              <li>
+                <strong>Consistency and Adaptability:</strong> Establishes a routine for consistent improvements.
+              </li>
+              <li>
+                <strong> Nutritional Synergy:</strong> Integrates meals or supplements to match workout intensity (e.g., high-protein post-workout meals).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div className="grid lg:grid-cols-3">
       <div className="max-w-4xl  p-6 bg-white shadow-lg rounded-xl mt-28 mb-10 mx-5 border-n-4 border-2">
         <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">Workout schedule 3 sessions a week</h1>

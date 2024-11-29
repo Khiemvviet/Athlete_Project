@@ -28,7 +28,13 @@ const Header = () => {
         setOpenNavigation(false);
         enablePageScroll();
         toggleSubmenu();
+        window.scrollTo(0, 0);
+     
     };
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+      };
+    
 
     const toggleSubmenu = (id) =>{
         if (openSubmenu==id){
@@ -58,7 +64,7 @@ const Header = () => {
         <div className="fixed flex bg-n-4 w-full h-28 z-50 top-0 left-0 px-20 py-3" >
             <div className=" flex justify-between items-center flex-1">
                 <Link to= "/">
-                <IoFootball size={80}color="red"></IoFootball>
+                <IoFootball size={80}color="red" onClick={handleClick}></IoFootball>
                 </Link>
             </div>
 
