@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { GiTrophy } from "react-icons/gi";
 import { FaCogs } from "react-icons/fa";
 
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,11 +18,16 @@ const Contact = () => {
       [name]: value
     }));
   };
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
-    alert('Thank you for your message!');
+    
+ 
+
+    
+    localStorage.setItem('userContact', JSON.stringify(formData));
+    
+
     setFormData({
       name: '',
       email: '',
@@ -160,6 +166,7 @@ const Contact = () => {
             </div>
 
             <div>
+           
               <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                 Your Message:
               </label>
@@ -172,6 +179,7 @@ const Contact = () => {
                 onChange={handleChange}
                 className="mt-1 block w-full rounded-md  shadow-sm focus:outline-none focus:ring-0  transition-colors border-n-4 border-2"
                 style={{padding: '15px'}}
+                
               ></textarea>
             </div>
 
@@ -200,3 +208,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
