@@ -22,6 +22,9 @@ const Contact = () => {
     e.preventDefault();
     console.log('Form Submitted:', formData);
     alert('Thank you for your message!');
+    localStorage.setItem('userContact', JSON.stringify(formData));
+    
+
     setFormData({
       name: '',
       email: '',
